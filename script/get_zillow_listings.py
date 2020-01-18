@@ -75,7 +75,7 @@ def build_search_query(region_id, page):
 def write_listings_to_file(listings, state, city, region_id):
   # flatten the data so it can be stored as a csv
   flattened_listings = list(map(transform_listing, listings))
-  filename = '%s_%s_%s.csv'%(city, state, region_id)
+  filename = 'datasets/%s_%s_%s.csv'%(city, state, region_id)
   keys = flattened_listings[0].keys()
   with open(filename, 'w', newline='') as output_file:
     dict_writer = csv.DictWriter(output_file, keys)
