@@ -1,0 +1,8 @@
+{
+  "scripts": {
+    "deploy": "push-dir --dir=static --branch=gh-pages --cleanup"
+  },
+  "dependencies": {
+    "push-dir": "^0.4.1"
+  }
+}
